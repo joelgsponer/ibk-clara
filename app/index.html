@@ -35,6 +35,7 @@
         <!-- Drawer Content -->
 	<core-menu valueattr="topic" selected={{page}}>
           <core-item label="Willkommen" topic="welcome"></core-item>
+          <core-item label="Standortbestimmung" topic="standortbestimmung"></core-item>
           <core-item label="Word" topic="word"></core-item>
           <core-item label="Excel" topic="excel"></core-item>
           <core-item label="Powerpoint" topic="powerpoint"></core-item>
@@ -54,12 +55,33 @@
         <!-- Main Content -->
 	<core-card id="core_card" layout vertical>
 	<core-pages selected="{{page}}" valueattr="topic">
-	    <section topic="welcome">
+	    
+        <section topic="welcome">
 	      <topic-welcome></topic-welcome>
 	    </section>
-                
+        
+  	    <section topic="standortbestimmung">
+          <topic-standortbestimmung></topic-standortbestimmung>
+	    </section>
+        
 	    <section topic="word">
-	      <h1>Wörd</h1>
+	      <h1>Word</h1>
+          Inhalt folgt.
+	    </section>
+        
+	    <section topic="excel">
+	      <h1>Excel</h1>
+          Inhalt folgt.
+	    </section>
+        
+  	    <section topic="powerpoint">
+	      <h1>Powerpoint</h1>
+          Inhalt folgt.
+	    </section>
+        
+  	    <section topic="internet">
+	      <h1>Internet</h1>
+          Inhalt folgt.
 	    </section>
 
 	  </core-pages>
