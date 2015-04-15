@@ -32,6 +32,7 @@ body {
   background-color: #EEEEEE;
 }
 
+
 core-toolbar {
   color: #FAFAFA;
   background-color: #009688;
@@ -169,15 +170,23 @@ dl dd {
   padding: 0 1em;
 }
 
-blockquote, q {
-  border-left: 4px solid #DDD;
-  padding: 0 1em;
-  color: #777;
-  quotes: none;
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
 }
-
-blockquote::before, blockquote::after, q::before, q::after {
-  content: none;
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
 }
 
 h1, h2, h3, h4, h5, h6 {
