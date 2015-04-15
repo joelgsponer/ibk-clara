@@ -40,7 +40,6 @@ core-toolbar {
 #core_card {
   position: absolute;
   width: 95%;
-  height: 95%;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
   margin: 2.5%;
@@ -97,28 +96,6 @@ pre code {
   border: 1px solid #CCC;
   padding: 0.5em 0.7em;
   display: block !important; /* added to counteract the Yahoo-specific `code` rule; without this, code blocks in Blogger are broken */
-}
-
-/* In edit mode, Wordpress uses a `* { font: ...;} rule+style that makes highlighted
-code look non-monospace. This rule will override it. */
-.markdown-here-wrapper[data-md-url*="wordpress."] code span {
-  font: inherit;
-}
-
-/* Wordpress adds a grey background to `pre` elements that doesn't go well with
-our syntax highlighting. */
-.markdown-here-wrapper[data-md-url*="wordpress."] pre {
-  background-color: transparent;
-}
-
-/* This spacing has been tweaked to closely match Gmail+Chrome "paragraph" (two line breaks) spacing.
-Note that we only use a top margin and not a bottom margin -- this prevents the
-"blank line" look at the top of the email (issue #243).
-*/
-p {
-  /* !important is needed here because Hotmail/Outlook.com uses !important to
-     kill the margin in <p>. We need this to win. */
-  margin: 0 0 1.2em 0 !important;
 }
 
 table, pre, dl, blockquote, q, ul, ol {
