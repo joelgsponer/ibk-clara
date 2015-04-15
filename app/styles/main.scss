@@ -17,6 +17,25 @@ core-toolbar {
   color: #FAFAFA;
   background-color: #009688;
 }
+/*
+ * NOTE:
+ * - The use of browser-specific styles (-moz-, -webkit-) should be avoided.
+ *   If used, they may not render correctly for people reading the email in
+ *   a different browser than the one from which the email was sent.
+ * - The use of state-dependent styles (like a:hover) don't work because they
+ *   don't match at the time the styles are made explicit. (In email, styles
+ *   must be explicitly applied to all elements -- stylesheets get stripped.)
+ */
+
+/* This is the overall wrapper, it should be treated as the `body` section. */
+.markdown-here-wrapper {
+}
+
+/* To add site specific rules, you can use the `data-md-url` attribute that we
+   add to the wrapper element. Note that rules like this are used depending
+   on the URL you're *sending* from, not the URL where the recipient views it.
+*/
+/* .markdown-here-wrapper[data-md-url*="mail.yahoo."] ul { color: red; } */
 
 pre, code {
   font-size: 0.85em;
@@ -47,7 +66,29 @@ pre code {
   display: block !important; /* added to counteract the Yahoo-specific `code` rule; without this, code blocks in Blogger are broken */
 }
 
-table, pre, dl, q, ul, ol {
+/* In edit mode, Wordpress uses a `* { font: ...;} rule+style that makes highlighted
+code look non-monospace. This rule will override it. */
+.markdown-here-wrapper[data-md-url*="wordpress."] code span {
+  font: inherit;
+}
+
+/* Wordpress adds a grey background to `pre` elements that doesn't go well with
+our syntax highlighting. */
+.markdown-here-wrapper[data-md-url*="wordpress."] pre {
+  background-color: transparent;
+}
+
+/* This spacing has been tweaked to closely match Gmail+Chrome "paragraph" (two line breaks) spacing.
+Note that we only use a top margin and not a bottom margin -- this prevents the
+"blank line" look at the top of the email (issue #243).
+*/
+p {
+  /* !important is needed here because Hotmail/Outlook.com uses !important to
+     kill the margin in <p>. We need this to win. */
+  margin: 0 0 1.2em 0 !important;
+}
+
+table, pre, dl, blockquote, q, ul, ol {
   margin: 1.2em 0;
 }
 
@@ -96,23 +137,15 @@ dl dd {
   padding: 0 1em;
 }
 
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+blockquote, q {
+  border-left: 4px solid #DDD;
+  padding: 0 1em;
+  color: #777;
+  quotes: none;
 }
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
+
+blockquote::before, blockquote::after, q::before, q::after {
+  content: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
