@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello IBK</title>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <!-- endbuild -->
+
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+  <link rel="import" href="elements/elements.html">
+  <!-- endreplace-->
+</head>
+
+<body unresolved fullbleed layout vertical>
+  <template is="auto-binding" id="app">
+
+    <core-drawer-panel>
+
+      <!-- Drawer -->
+      <core-header-panel drawer>
+
+        <!-- Drawer Toolbar -->
+	<core-toolbar><core-icon icon="hardware:laptop-chromebook" style="width:48px;height:48px"></core-icon></core-toolbar>
+
+        <!-- Drawer Content -->
+	<core-menu valueattr="topic" selected={{page}}>
+          <core-item label="Willkommen" topic="welcome"></core-item>
+          <core-item label="Word" topic="word"></core-item>
+          <core-item label="Excel" topic="excel"></core-item>
+          <core-item label="Powerpoint" topic="powerpoint"></core-item>
+          <core-item label="Internet" topic="Internet"></core-item>
+        </core-menu>
+
+      </core-header-panel>
+
+      <!-- Main -->
+      <core-header-panel main>
+
+        <!-- Main Toolbar -->
+        <core-toolbar>
+          <span>Informatik-IBK</span>
+        </core-toolbar>
+
+        <!-- Main Content -->
+	<core-card id="core_card" layout vertical>
+	<core-pages selected="{{page}}" valueattr="topic">
+	    <section topic="welcome">
+	      <topic-welcome></topic-welcome>
+	    </section>
+                
+	    <section topic="word">
+	      <h1>Wörd</h1>
+	    </section>
+
+	  </core-pages>
+	</core-card>
+      </core-header-panel>
+    </core-drawer-panel>
+
+  </template>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  <!-- endbuild-->
+</body>
+
+</html>
