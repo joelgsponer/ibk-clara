@@ -9,7 +9,8 @@ body {
 }
 
 core-pages{
-  margin: 5 5 5 5 px;
+  margin: 5 5em;
+  padding: 5 5em;
 }
 
 core-toolbar {
@@ -46,7 +47,7 @@ pre code {
   display: block !important; /* added to counteract the Yahoo-specific `code` rule; without this, code blocks in Blogger are broken */
 }
 
-table, pre, dl, blockquote, q, ul, ol {
+table, pre, dl, q, ul, ol {
   margin: 1.2em 0;
 }
 
