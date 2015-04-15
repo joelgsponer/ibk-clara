@@ -4,70 +4,18 @@ body {
   color: #333;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-}
-
-.hero-unit h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 [drawer] {
   background-color: #EEEEEE;
 }
 
+core-pages{
+  margin: 5 5 5 5 px;
+}
 
 core-toolbar {
   color: #FAFAFA;
   background-color: #009688;
 }
-#core_card {
-  position: absolute;
-  width: 95%;
-  border-radius: 2px;
-  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
-  margin: 2.5%;
-  padding:20px;
-  left: 0px;
-  top: 0px;
-  margin: 6px;
-  background-color: rgb(255, 255, 255);
-}
-/*
- * NOTE:
- * - The use of browser-specific styles (-moz-, -webkit-) should be avoided.
- *   If used, they may not render correctly for people reading the email in
- *   a different browser than the one from which the email was sent.
- * - The use of state-dependent styles (like a:hover) don't work because they
- *   don't match at the time the styles are made explicit. (In email, styles
- *   must be explicitly applied to all elements -- stylesheets get stripped.)
- */
-
-/* This is the overall wrapper, it should be treated as the `body` section. */
-.markdown-here-wrapper {
-}
-
-/* To add site specific rules, you can use the `data-md-url` attribute that we
-   add to the wrapper element. Note that rules like this are used depending
-   on the URL you're *sending* from, not the URL where the recipient views it.
-*/
-/* .markdown-here-wrapper[data-md-url*="mail.yahoo."] ul { color: red; } */
 
 pre, code {
   font-size: 0.85em;
