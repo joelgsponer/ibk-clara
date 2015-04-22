@@ -40,6 +40,8 @@
           <core-item label="Excel" topic="excel"></core-item>
           <core-item label="Powerpoint" topic="powerpoint"></core-item>
           <core-item label="Internet" topic="internet"></core-item>
+          <core-item label="E-Mail" topic="email"></core-item>
+          <core-item label="HTML" topic="html"></core-item>
         </core-menu>
 
       </core-header-panel>
@@ -48,45 +50,49 @@
       <core-header-panel main>
 
         <!-- Main Toolbar -->
-        <core-toolbar>
+        <core-toolbar id = "navheader">
           <span>Informatik-IBK</span>
         </core-toolbar>
 
         <!-- Main Content -->
+  <div class = "content">
 	<core-pages selected="{{page}}" valueattr="topic">
-	    
-        <section topic="welcome">
-	      <topic-welcome></topic-welcome>
-	    </section>
+    <section topic="welcome">
+	    <topic-welcome></topic-welcome>
+	  </section>
         
-  	    <section topic="standortbestimmung">
-          <topic-standortbestimmung></topic-standortbestimmung>
-	    </section>
+    <section topic="standortbestimmung">
+      <topic-standortbestimmung></topic-standortbestimmung>
+	  </section>
         
-	    <section topic="word">
-	      <h1>Word</h1>
-          Inhalt folgt.
-	    </section>
+	  <section topic="word">
+	    <h1>Word</h1>
+      Inhalt folgt.
+	  </section>
         
-	    <section topic="excel">
-	      <h1>Excel</h1>
-          Inhalt folgt.
-	    </section>
+	  <section topic="excel">
+	    <h1>Excel</h1>
+      Inhalt folgt.
+	  </section>
         
-	    <section topic="powerpoint">
-	      <h1>Powerpoint</h1>
-          Inhalt folgt.
-	    </section>
+	  <section topic="powerpoint">
+	    <h1>Powerpoint</h1>
+      Inhalt folgt.
+	  </section>
         
-	    <section topic="internet">
-	      <h1>Internet</h1>
-          <blockquote>Inhalt folgt.</blockquote>
-	    </section>
+    <section topic="internet">
+	    <h1>Internet</h1>
+      Inhalt folgt.
+	  </section>
+
+	  <section topic="html">
+      <topic-HTML></topic-HTML>  
+	  </section>
 
 	  </core-pages>
+    </div>
       </core-header-panel>
     </core-drawer-panel>
-
   </template>
 
   <!-- build:js scripts/app.js -->
