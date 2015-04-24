@@ -24,78 +24,50 @@
 <body unresolved fullbleed layout vertical>
   <template is="auto-binding" id="app">
 
-    <core-drawer-panel>
-
-      <!-- Drawer -->
-      <core-header-panel drawer>
-
-        <!-- Drawer Toolbar -->
-	<core-toolbar><core-icon icon="hardware:laptop-chromebook" style="width:48px;height:48px"></core-icon></core-toolbar>
-
-        <!-- Drawer Content -->
-	<core-menu valueattr="topic" selected={{page}}>
-          <core-item label="Willkommen" topic="welcome"></core-item>
-          <core-item label="Standortbestimmung" topic="standortbestimmung"></core-item>
-          <core-item label="Word" topic="word"></core-item>
-          <core-item label="Excel" topic="excel"></core-item>
-          <core-item label="Powerpoint" topic="powerpoint"></core-item>
-          <core-item label="E-Mail" topic="email"></core-item>
-          <core-item label="Blog" topic="blog"></core-item>
-          <core-item label="HTML" topic="html"></core-item>
-        </core-menu>
-
-      </core-header-panel>
-
-      <!-- Main -->
-      <core-header-panel main>
-
-        <!-- Main Toolbar -->
-        <core-toolbar id = "navheader">
-          <span>Informatik-IBK</span>
+    <core-scaffold id="core_scaffold">
+      <core-header-panel mode="seamed" id="core_header_panel" navigation flex>
+        <core-toolbar id="core_toolbar">
+          <core-icon icon="hardware:laptop-chromebook"></core-icon>
         </core-toolbar>
-
-        <!-- Main Content -->
-  <div class = "content">
-	<core-pages selected="{{page}}" valueattr="topic">
-    <section topic="welcome">
-	    <topic-welcome></topic-welcome>
-	  </section>
-        
-    <section topic="standortbestimmung">
-      <topic-standortbestimmung></topic-standortbestimmung>
-	  </section>
-        
-	  <section topic="word">
-	    <h1>Word</h1>
-      Inhalt folgt.
-	  </section>
-        
-	  <section topic="excel">
-	    <h1>Excel</h1>
-      Inhalt folgt.
-	  </section>
-        
-	  <section topic="powerpoint">
-	    <h1>Powerpoint</h1>
-      Inhalt folgt.
-	  </section>
-      
-      <section topic="email">
-        <topic-email></topic-email>  
-	  </section>
-      
-      <section topic="blog">
-        <topic-blog></topic-blog>  
-	  </section>
-
-	  <section topic="html">
-        <topic-HTML></topic-HTML>  
-	  </section>
-
-	  </core-pages>
-    </div>
+        <core-menu selected="{{ page }}" valueattr="topic" selectedindex="0" id="core_menu" theme="core-light-theme">
+          <core-item id="core_item" label="Willkommen" topic="welcome" horizontal center layout active></core-item>
+          <core-item label="Standortbestimmung" topic="standortbestimmung" horizontal center layout></core-item>
+          <core-item label="Word" topic="word" horizontal center layout></core-item>
+          <core-item label="Excel" topic="excel" horizontal center layout></core-item>
+          <core-item label="Powerpoint" topic="powerpoint" horizontal center layout></core-item>
+          <core-item label="E-Mail" topic="email" horizontal center layout></core-item>
+          <core-item label="Blog" topic="blog" horizontal center layout></core-item>
+          <core-item label="HTML" topic="html" horizontal center layout></core-item>
+        </core-menu>
       </core-header-panel>
-    </core-drawer-panel>
+      <div id="div" tool>Title</div>
+      <core-pages selected="{{ page }}" valueattr="topic" selectedindex="0" notap>
+        <section topic="welcome" active>
+          <topic-welcome></topic-welcome>
+        </section>
+        <section topic="standortbestimmung">
+          <topic-standortbestimmung></topic-standortbestimmung>
+        </section>
+        <section topic="word">
+          <h1>Word</h1>
+        </section>
+        <section topic="excel">
+          <h1>Excel</h1>
+        </section>
+        <section topic="powerpoint">
+          <h1>Powerpoint</h1>
+        </section>
+        <section topic="email">
+          <topic-email></topic-email>
+        </section>
+        <section topic="blog">
+          <topic-blog></topic-blog>
+        </section>
+        <section topic="html">
+          <topic-html></topic-html>
+        </section>
+      </core-pages>
+    </core-scaffold>
   </template>
 
   <!-- build:js scripts/app.js -->
