@@ -5,7 +5,7 @@ body {
 }
 
 [drawer] {
-  background-color: #E8EAF6;
+  background-color: #3F51B5;
 }
 
 core-scaffold{
@@ -14,10 +14,15 @@ core-scaffold{
 
 core-toolbar {
   color: #FAFAFA;
-  background-color: #3F51B5;
+  background-color: #E8EAF6;
 }
 .content {
           padding: 20px;
+  }
+  core-icon[icon="hardware:laptop-chromebook"] {
+    color: #a4c639;
+    width: 32px;
+    height: 32px;
   }
 /*
  * NOTE:
