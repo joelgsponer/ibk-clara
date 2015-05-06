@@ -17,13 +17,13 @@ core-toolbar {
   background-color: #5C6BC0;
 }
 .content {
-          padding: 20px;
-  }
-  core-icon[icon="hardware:laptop-chromebook"] {
-    color: #a4c639;
-    width: 32px;
-    height: 32px;
-  }
+  padding: 20px;
+}
+core-icon[icon="hardware:laptop-chromebook"]::shadow {
+  color: #a4c639;
+  width: 32px;
+  height: 32px;
+}
 /*
  * NOTE:
  * - The use of browser-specific styles (-moz-, -webkit-) should be avoided.
