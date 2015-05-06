@@ -19,7 +19,7 @@ core-toolbar {
 .content {
   padding: 20px;
 }
-core-icon[icon="hardware:laptop-chromebook"] /deep/ {
+core-menu::shadow core-item::shadow core-icon[icon="hardware:laptop-chromebook"]::shadow {
   color: #a4c639;
   width: 32px;
   height: 32px;
