@@ -20,7 +20,8 @@ core-toolbar {
   padding: 20px;
 }
 core-item[icon="hardware:laptop-chromebook"]::shadow #icon{
-  color: #a4c639;
+  color: #FFFFFFFF;
+  background-color:#5C6BC0;
   width: 32px;
   height: 32px;
 }
